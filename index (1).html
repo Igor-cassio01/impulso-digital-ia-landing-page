@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Processos que Toda Empresa Pode Automatizar com IA Agora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .benefits {
+            margin: 40px 0;
+        }
+
+        .benefits h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .benefits ul {
+            list-style: none;
+        }
+
+        .benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .service-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .service-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #f5576c;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial cite {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Descubra como a Inteligência Artificial pode economizar até 10 horas por semana no seu negócio</h1>
+            <p>Baixe gratuitamente o e-book prático com 10 automações que você pode implementar hoje mesmo usando IA — e veja como aplicar isso no seu negócio com ajuda especializada.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-section">
+                <h2>Baixe seu E-book Gratuito</h2>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Quero meu e-book gratuito</button>
+                </form>
+                <div id="successMessage" class="success-message">
+                    <h3>Obrigado! Seu e-book foi enviado para seu e-mail.</h3>
+                    <p>Verifique sua caixa de entrada (e spam) nos próximos minutos.</p>
+                </div>
+            </div>
+
+            <div class="benefits">
+                <h3>O que você vai aprender no e-book:</h3>
+                <ul>
+                    <li>Como a IA pode automatizar o atendimento ao cliente 24h</li>
+                    <li>Como gerar conteúdo para redes sociais em minutos</li>
+                    <li>Como montar relatórios com dados organizados automaticamente</li>
+                    <li>Como qualificar leads automaticamente via chatbot</li>
+                    <li>Como traduzir e adaptar conteúdo para outros idiomas</li>
+                    <li>Como automatizar agendamentos e reuniões</li>
+                    <li>E muito mais...</li>
+                </ul>
+            </div>
+
+            <div class="service-highlight">
+                <h3>Precisa de ajuda para aplicar tudo isso?</h3>
+                <p>Conheça o <strong>Impulso Digital IA</strong> — um serviço feito sob medida para PMEs que querem usar inteligência artificial sem complicações.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <h4>✓ Produção de conteúdo com IA</h4>
+                    </div>
+                    <div class="feature">
+                        <h4>✓ Automação de marketing e e-mails</h4>
+                    </div>
+                    <div class="feature">
+                        <h4>✓ Diagnóstico e plano de ação</h4>
+                    </div>
+                    <div class="feature">
+                        <h4>✓ Entrega em até 7 dias úteis</h4>
+                    </div>
+                </div>
+
+                <p><strong>👉 Agende sua análise gratuita de presença digital.</strong></p>
+                <p>Vamos mostrar gratuitamente como a IA pode transformar seu negócio em apenas 7 dias.</p>
+                <a href="#contato" class="btn-secondary">Agendar Agora</a>
+            </div>
+
+            <div class="testimonial">
+                <blockquote>
+                    "Em 10 dias, meu Instagram estava cheio de conteúdo profissional e ainda recebi um plano de automação de vendas por e-mail. Foi como contratar uma agência — só que mais rápido e barato."
+                </blockquote>
+                <cite>— Carlos Menezes, Coach de Carreira</cite>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p><strong>Impulso Digital IA</strong></p>
+            <p>contato@impulsodigitalai.com</p>
+            <p>Especialistas em Automação com Inteligência Artificial</p>
+            <p style="font-size: 0.9rem; margin-top: 20px;">Seus dados estão protegidos de acordo com a LGPD</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você integraria com seu sistema de e-mail marketing
+            // Por exemplo: Mailchimp, ConvertKit, etc.
+            
+            // Simulação de envio
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            
+            // Esconder formulário e mostrar mensagem de sucesso
+            document.querySelector('.form-section form').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Aqui você adicionaria a integração real com seu sistema
+            console.log('Lead capturado:', { nome, email });
+            
+            // Exemplo de integração com Google Sheets ou webhook
+            // fetch('SUA_URL_DE_WEBHOOK', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ nome, email })
+            // });
+        });
+    </script>
+</body>
+</html>
+
